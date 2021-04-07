@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/x.css">
+    <title>Rimix Resume Maker</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="x-row-padding">
+            <div class="x-rest">
+                <nav class="x-bar x-padding">
+                    <div class="x-margin">
+                        <div class="x-right x-animate-right">
+                            <a href="#"
+                                class="x-bar-item x-button x-round-xxlarge x-button x-blue x-round-xxlarge x-margin-right"
+                                onclick="showModel('sign-in')">Sign
+                                In</a>
+                            <a href="#"
+                                class="x-bar-item x-button x-round-xxlarge x-button x-blue x-round-xxlarge x-margin-right"
+                                onclick="showModel('sign-up')">Sign
+                                Up</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+        <div class="x-row-padding">
+            <div class="x-row">
+                <div class="x-half">
+                    <h1 class="header__heading-primary x-animate-opacity">
+                        <span class="header__heading-primary--main">Rimix Resume Maker</span>
+                        <span class="header__heading-primary--sub">Create your powerful resume</span>
+                        <span class="header__heading-primary--tertiary">Rimix helps you to create outstanding
+                            resume.</span>
+                    </h1>
+                </div>
+                <div class="x-half x-animate-opacity">
+                    <img src="assets/images/resume-i.png" alt="Logo" class="header__logo" width="100%">
+                </div>
+            </div>
+        </div>
+        <div class="x-row">
+            <div class="x-margin-left x-padding x-animate-zoom">
+                <a href="pages/create_resume.html" class="header__btn x-btn x-blue x-round-xxlarge">Let's get
+                    started</a>
+            </div>
+        </div>
+        <div class="x-row x-animate-opacity">
+            <div class="header__copyright">
+                Copyright &copy; 2020. All rights reserved.
+            </div>
+        </div>
+    </header>
+    <section class="x-container">
+        <div id="sign-up" class="x-modal">
+            <div class="x-modal-content x-card-4 x-animate-opacity">
+                <div class="x-container">
+                    <span onclick="hideModel('sign-up')"
+                        class="x-button x-hover-red x-round-xlarge x-display-topright">&times;</span>
+                </div>
+                <form action="#" id="signUpForm" class="x-container">
+                    <div class="x-row-padding">
+                        <div class="x-padding-large x-half">
+                            <input type="text" id="firstNameTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray "
+                                placeholder="First Name" autocomplete="username">
+                            <small class="error">error</small>
+                        </div>
+                        <div class="x-padding-large x-half">
+                            <input type="text" id="lastNameTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray"
+                                placeholder="Last Name" autocomplete="username">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                    <div class="x-row-padding">
+                        <div class="x-padding-large">
+                            <input type="email" id="emailTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray"
+                                placeholder="Email" autocomplete="email">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                    <div class="x-row-padding">
+                        <div class="x-padding-large">
+                            <input type="tel" id="mobileNumberTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray"
+                                placeholder="Mobile Number" autocomplete="tel">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                    <div class="x-row-padding">
+                        <div class="x-padding-large x-half">
+                            <input type="password" id="passwordTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray"
+                                placeholder="Password">
+                            <small class="error">error</small>
+                        </div>
+                        <div class="x-padding-large x-half">
+                            <input type="password" id="confirmPasswordTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray"
+                                placeholder="Confirm Password">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                    <div class="x-row-padding">
+                        <div class="x-half">
+                            <div class="x-half">
+                                <div class="x-padding">
+                                    <button id="signUpButton" type="submit"
+                                        class="header__btn x-btn x-blue x-hover-white x-round-xxlarge">Sign
+                                        Up</button>
+                                </div>
+                            </div>
+                            <div class="x-half">
+                                <div class="x-padding">
+                                    <button id="resetButton"
+                                        class="header__btn x-btn x-blue x-hover-amber x-round-xxlarge"
+                                        type="reset">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="sign-in" class="x-modal">
+            <div class="x-modal-content x-card-4 x-animate-opacity">
+                <div class="x-container">
+                    <span onclick="hideModel('sign-in')"
+                        class="x-button x-hover-red x-round-xlarge x-display-topright">&times;</span>
+                </div>
+                <form action="#" id="signInForm" class="x-container">
+                    <div class="x-row-padding">
+                        <div class="x-padding-large">
+                            <input type="email" id="signInEmailTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray "
+                                placeholder="Email" autocomplete="email">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                    <div class="x-row-padding">
+                        <div class="x-padding-large">
+                            <input type="password" id="signInPasswordTextBox"
+                                class="x-input x-border x-bottombar x-round-large x-hover-border-gray "
+                                placeholder="Password">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                    <div class="x-row-padding">
+                        <div class="x-padding-large">
+                            <button id="signInButton" type="submit"
+                                class="header__btn x-btn x-blue x-hover-white x-round-xxlarge">Sign
+                                In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="scripts/index.js"></script>
+    <script>
+        function showModel(id) {
+            let model = document.getElementById(id);
+            model.style.display = "block";
+        }
+
+        function hideModel(id) {
+            let model = document.getElementById(id);
+            model.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

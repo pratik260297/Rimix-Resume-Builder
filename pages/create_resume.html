@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/create.css">
+        <link rel="stylesheet" href="../css/x.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <title>Rimix Resume Maker : Create</title>
+    </head>
+
+    <body>
+        <!-- <form action="resume_templates.html" id="inputsForm"> -->
+        <section class=" section x-blue">
+            <div class="x-row-padding x-center">
+                <div class="x-third x-padding-large">
+                    <h3>Resume Builder</h3>
+                </div>
+            </div>
+            <div class="dashboard">
+                <div class="x-row-padding">
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('a')">
+                        <div class=" x-row-padding x-margin">
+                            <i class="fas fa-user x-xxxlarge"></i>
+                        </div>
+                        <div class=" x-row-padding x-margin">
+                            Personal Info
+                        </div>
+                    </div>
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('b')">
+                        <div class="x-row-padding x-margin">
+                            <i class="fas fa-graduation-cap x-xxxlarge"></i>
+                        </div>
+                        <div class="x-row-padding x-margin">
+                            Education
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row-padding">
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('c')">
+                        <div class="x-row-padding x-margin">
+                            <i class="fas fa-briefcase x-xxxlarge"></i>
+                        </div>
+                        <div class="x-row-padding x-margin">
+                            Work Experience
+                        </div>
+                    </div>
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('d')">
+                        <div class="x-row-padding x-margin">
+                            <i class="fas fa-brain x-xxxlarge"></i>
+                        </div>
+                        <div class="x-row-padding x-margin">
+                            Area of experties
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row-padding">
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('e')">
+                        <div class="x-row-padding x-margin">
+                            <i class="fas fa-language x-xxxlarge"></i>
+                        </div>
+                        <div class="x-row-padding x-margin">
+                            Languages
+                        </div>
+                    </div>
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('f')">
+                        <div class="x-row-padding x-margin">
+                            <i class="fas fa-bullseye x-xxxlarge"></i>
+                        </div>
+                        <div class="x-row-padding x-margin">
+                            Objective
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row-padding">
+                    <div class="x-half x-padding x-round-xxlarge x-hover-text-black" onclick="toggle('g')">
+                        <div class="x-row-padding x-margin">
+                            <i class="fas fa-th-list x-xxxlarge"></i>
+                        </div>
+                        <div class="x-row-padding x-margin">
+                            Other Skills
+                        </div>
+                    </div>
+                </div>
+
+                <div class="x-row-padding">
+                    <div class="x-rest x-padding">
+                        <button type="submit" id="buildResumeButton"
+                            class="x-button btn x-blue x-large x-round-xxlarge">Build
+                            Resume</button>
+                    </div>
+                </div>
+                <!-- </form> -->
+            </div>
+            <!-- <form action="resume_templates.html" id="inputsForm"> -->
+            <div id="a" class="inputs x-rest x-animate-opacity">
+                <div class="x-row">
+                    <div class="x-container x-half">
+                        <div class="x-margin">
+                            <input type="text" id="firstNameInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="First Name" autocomplete="name">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                    <div class="x-container x-half">
+                        <div class="x-margin">
+                            <input type="text" id="lastNameInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Last Name" autocomplete="family-name">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-container">
+                        <div class="x-margin">
+                            <input type="email" id="emailInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Email" autocomplete="email">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-container x-half">
+                        <div class="x-margin">
+                            <input type="tel" id="mobileNumberInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Mobile Number" autocomplete="mobile">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                    <div class="x-container x-half">
+                        <div class="x-margin">
+                            <input type="date" id="birthDateInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Birth Date" autocomplete="bday-day">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-container">
+                        <div class="x-margin">
+                            <textarea cols="30" rows="2" id="addressInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Address" autocomplete="street-address"></textarea>
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-container x-third">
+                        <div class="x-margin">
+                            <input type="text" id="cityInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="City">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                    <div class="x-container x-third">
+                        <div class="x-margin">
+                            <input type="text" id="stateInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="State">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                    <div class="x-container x-third">
+                        <div class="x-margin">
+                            <input type="text" id="countryInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Country" autocomplete="country-name">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-container x-half">
+                        <div class="x-margin">
+                            <input type="text" id="passportNumberInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Passport Number">
+                            <small class="error">error</small>
+
+                        </div>
+                    </div>
+                    <div class="x-container x-half">
+                        <div class="x-margin">
+                            <input type="text" id="nationalityInput"
+                                class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                placeholder="Nationality">
+                            <small class="error">error</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="b" class="inputs x-rest x-animate-opacity">
+                <div class="x-row">
+                    <fieldset class="x-border x-round-xlarge">
+                        <legend><b>Secondary</b></legend>
+                        <div class="x-row">
+                            <div class="x-margin x-threequarter">
+                                <input id="secTitleInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="School">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="secYearInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Year">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-quarter">
+                                <input id="secOverallInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Overall">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="secResultInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Result">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="secDivisionInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Division">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="x-row">
+                    <fieldset class="x-border x-round-xlarge x-margin-top">
+                        <legend><b>High Secondary</b></legend>
+                        <div class="x-row">
+                            <div class="x-margin x-threequarter">
+                                <input id="highSecTitleInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="School">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="highSecYearInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Year">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-quarter">
+                                <input id="highSecOverallInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Overall">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="highSecResultInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Result">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="highSecDivisionInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Division">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="x-row">
+                    <fieldset class="x-border x-round-xlarge x-margin-top">
+                        <legend><b>Graduation</b></legend>
+                        <div class="x-row">
+                            <div class="x-margin x-threequarter">
+                                <input id="graduTitleInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="School or University">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="graduYearInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Year">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-quarter">
+                                <input id="graduOverallInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Overall">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="graduResultInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Result">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="graduDivisionInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Division">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="x-row">
+                    <fieldset class="x-border x-round-xlarge x-margin-top">
+                        <legend><b>Post Graduation</b></legend>
+                        <div class="x-row">
+                            <div class="x-margin x-threequarter">
+                                <input id="postGraduTitleInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="School or University">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="postGraduYearInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Year">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-quarter">
+                                <input id="postGraduOverallInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Overall">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="postGraduResultInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Result">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="postGraduDivisionInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Division">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="c" class="inputs x-rest x-animate-opacity">
+                <div class="x-row">
+                    <fieldset class="x-border x-round-xlarge">
+                        <legend><b>Experience 1</b></legend>
+                        <div class="x-row">
+                            <div class="x-margin x-twothird">
+                                <input id="exp1OrganisationInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Organisation">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="exp1CityInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="City">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-quarter">
+                                <input id="exp1FromInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="From">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="exp1ToInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="To">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="exp1MonthsInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Months">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-half">
+                                <input id="exp1areaOfIntInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Area of intereset">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="exp1RoleInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Role">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="x-row">
+                    <fieldset class="x-border x-round-xlarge x-margin-top">
+                        <legend><b>Experience 2</b></legend>
+                        <div class="x-row">
+                            <div class="x-margin x-twothird">
+                                <input id="exp2OrganisationInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Organisation">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="exp2CityInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="City">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-quarter">
+                                <input id="exp2FromInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="From">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="exp2ToInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="To">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-quarter">
+                                <input id="exp2MonthsInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Months">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                        <div class="x-row">
+                            <div class="x-margin x-half">
+                                <input id="exp2areaOfIntInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Area of intereset">
+                                <small class="error">error</small>
+
+                            </div>
+                            <div class="x-margin x-rest">
+                                <input id="exp2RoleInput" type="text"
+                                    class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                                    placeholder="Role">
+                                <small class="error">error</small>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+            <div id="d" class="inputs x-rest x-animate-opacity">
+                <div class="x-row">
+                    <div class="x-margin x-half">
+                        <input id="experties1Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Experties 1">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="experties2Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Experties 2">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-margin x-half">
+                        <input id="experties3Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Experties 3">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="experties4Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Experties 4">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+            </div>
+            <div id="e" class="inputs x-rest x-animate-opacity">
+                <div class="x-row">
+                    <div class="x-margin x-half">
+                        <input id="language1Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Language 1">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="language2Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Language 2">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-margin x-third">
+                        <input id="language3Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Language 3">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="language4Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Language 4">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+            </div>
+            <div id="f" class="inputs x-rest x-animate-opacity ">
+                <div class="x-row">
+                    <div class="x-margin">
+                        <textarea id="objectiveInput" cols="30" rows="6"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Objective"></textarea>
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+            </div>
+            <div id="g" class="inputs x-rest x-animate-opacity ">
+                <div class="x-row">
+                    <div class="x-margin x-half">
+                        <input id="skill1Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Skill 1">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="skill2Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Skill 2">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-margin x-half">
+                        <input id="skill3Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Skill 3">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="skill4Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Skill 4">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+                <div class="x-row">
+                    <div class="x-margin x-half">
+                        <input id="skill5Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Skill 5">
+                        <small class="error">error</small>
+
+                    </div>
+                    <div class="x-margin x-rest">
+                        <input id="skill6Input" type="text"
+                            class="x-input x-border x-bottombar x-hover-border-blue x-round-xlarge"
+                            placeholder="Skill 6">
+                        <small class="error">error</small>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- </form> -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="../scripts/create_validation.js"></script>
+        <script src="../scripts/create.js"></script>
+    </body>
+
+</html>

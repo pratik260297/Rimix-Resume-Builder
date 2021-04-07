@@ -1,0 +1,65 @@
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.section {
+  height: 25vh;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dashboard {
+  position: relative;
+  top: -10px;
+  background-color: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(75, 71, 71);
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  width: 30%;
+  float: left;
+}
+
+.inputs {
+  position: relative;
+  top: -10px;
+  background-color: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(75, 71, 71);
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+}
+
+#a {
+  display: block;
+}
+#b {
+  display: none;
+}
+#c {
+  display: none;
+}
+#d {
+  display: none;
+}
+#e {
+  display: none;
+}
+#f {
+  display: none;
+}
+#g {
+  display: none;
+}
+#h {
+  display: none;
+}
